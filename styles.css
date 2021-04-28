@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background-color: #222222;
+  font-family: sans-serif;
+}
+
+.heading {
+  height: 100vh;
+  background-color: #555555;
+  display: grid;
+  place-items: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px black;
+  background-image: url();
+}
+
+.timeline-container {
+  display: grid;
+  grid-template-columns: 1fr 10% 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://picsum.photos/1200/1200);
+  background-size: cover;
+  background-position: center;
+}
+
+.timeline-line {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  background-color: white;
+  width: 10px;
+  height: 100%;
+}
+
+.timeline-items {
+  padding: 10%;
+  margin: 10px;
+  background-color: #555555;
+  border-radius: 20px;
+  background: rgba(85, 85, 85, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.item-1 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.item-2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.item-3 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.item-4 {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+@media screen and (max-width: 800px) {
+  .timeline-container {
+    grid-template-columns: 10% 1fr;
+  }
+
+  .timeline-line {
+    grid-column: 1;
+  }
+
+  .item-1 {
+    grid-column: 2;
+  }
+
+  .item-2 {
+    grid-column: 2;
+  }
+
+  .item-3 {
+    grid-column: 2;
+  }
+
+  .item-4 {
+    grid-column: 2;
+  }
+}
